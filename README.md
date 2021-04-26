@@ -9,9 +9,11 @@ Paste your Github Auth Token data inside the REACT_APP_TOKEN variable from .env 
 ### Install dependencies `npm install`
 
 run the command `npm install` in order to install dependencies
+
+
 #### `npm start`
 
-Runs the app in the development mode.\
+Runs the app in the development mode with 'npm start' command.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
