@@ -9,6 +9,7 @@ const Home = () => {
   const [flag, setFlag] = useState("");
   const setTopicInfo = (name) => {
     getTopicInfo(name).then((result) => {
+      console.log(result.data);
     });
   };
   const changeFlag = (name) => {
@@ -29,7 +30,7 @@ const Home = () => {
       <h1>Github Topics List related with the term 'react'</h1>
       {topics.map((item, index) => {
         return (
-          <div key={index} onClick={()=>{setTopicInfo(item.name)}}>
+          <div key={index} onClick={()=>setTopicInfo(item.name)}>
             <Topic
               key={index}
               topic={item}
