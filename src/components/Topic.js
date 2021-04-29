@@ -14,7 +14,11 @@ const Topic = ({ topic, flag, changeFlag }) => {
   };
 
   return (
-    <div id="flex-row" data-testid="flex-row" onClick={() => selectTopic(topic.name)}>
+    <div
+      id="flex-row"
+      data-testid="flex-row"
+      onClick={() => selectTopic(topic.name)}
+    >
       <div>
         <p id="topic-name">{topic.name}</p>
       </div>
