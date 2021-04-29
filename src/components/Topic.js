@@ -7,14 +7,14 @@ const Topic = ({ topic, flag, changeFlag }) => {
   const [info, setInfo] = useState({});
 
   const selectTopic = (name) => {
-    const cc = getTopicInfo(name).then((result) => {
+    const getInfoFromTopic = getTopicInfo(name).then((result) => {
       setInfo(result.data);
       changeFlag(topic.name);
     });
   };
 
   return (
-    <div id="flex-row" data-testid="" onClick={() => selectTopic(topic.name)}>
+    <div id="flex-row" data-testid="flex-row" onClick={() => selectTopic(topic.name)}>
       <div>
         <p id="topic-name">{topic.name}</p>
       </div>

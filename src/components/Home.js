@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,Fragment } from "react";
 import { getFromGithubApi } from "../adapters/github-rest-api/index";
 import Topic from "./Topic";
 import { getTopicInfo } from "../adapters/github-graphql-api/index";
+import Title from './Title';
 
 const Home = () => {
   const [topics, updateTopics] = useState([]);
@@ -26,8 +27,8 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Github Topics List related with the term 'react'</h1>
+    <Fragment>
+     <Title children={'Github Topics List related with the term react '} />
       {topics.map((item, index) => {
         return (
           <div key={index} onClick={()=>setTopicInfo(item.name)}>
@@ -41,7 +42,7 @@ const Home = () => {
           </div>
         );
       })}
-    </div>
+    </Fragment>
   );
 };
 
